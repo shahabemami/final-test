@@ -10,9 +10,14 @@ import { toast } from 'react-toastify';
 const Register = (props) => {
     const { register, handleSubmit } = useForm();
     const OnSubmit = async data => {
+        // console.log(data);
         try {
             const signUpResponse = await Auth.signUp({
-                ...data,
+                password: data.password,
+                username: data.username,
+                attributes: {
+                    email: data.email,
+                }
             });
             console.log(signUpResponse);
             toast.success('you are successfuly signed up now log in.');
@@ -36,7 +41,11 @@ const Register = (props) => {
                     <form onSubmit={handleSubmit(OnSubmit)} >
                         <p className='field'>
                             <label>E-MAIL</label>
-                            <input ref={register} name="username" type='email' />
+                            <input ref={register} name="email" type='email' />
+                        </p>
+                        <p className='field'>
+                            <label>Username</label>
+                            <input ref={register} name="username" type='text' />
                         </p>
                         <p className='field'>
                             <label>PASSWORD</label>

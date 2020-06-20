@@ -17,7 +17,7 @@ const Login = (props) => {
 
         // AWS Cognito integration here
         try {
-            const user = await Auth.signIn(data.email, data.password);
+            const user = await Auth.signIn(data.username, data.password);
             console.log(user);
             toast.success('you are successfuly logged in.');
             history.push('home');
@@ -38,8 +38,8 @@ const Login = (props) => {
                     <button onClick={props.click} className='b b-form' title='Mais Informações'>Register</button>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <p className='field'>
-                            <label>E-MAIL</label>
-                            <input ref={register} name="email" type='email' />
+                            <label>Username</label>
+                            <input ref={register} name="username" type='text' />
                         </p>
                         <p className='field'>
                             <label>PASSWORD</label>
