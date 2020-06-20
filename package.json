@@ -2,7 +2,7 @@
   "name": "mini_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://myusername.github.io/final-test",
+  "homepage": "https://shahabemami.github.io/final-test",
   "dependencies": {
     "@material-ui/styles": "^4.10.0",
     "@testing-library/jest-dom": "^4.2.4",
