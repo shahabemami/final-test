@@ -11,8 +11,8 @@ function Routes(props) {
     return (
             <BrowserRouter>
                     <Switch>
-                        <Route path="/" exact component={LoginRegister} />
-                        <Route path="/Home" exact component={Home} />
+                        <Route path="/Home" component={Home} />
+                        <Route path="/" component={LoginRegister} />
                     </Switch>
                     <ToastContainer />
             </BrowserRouter>
