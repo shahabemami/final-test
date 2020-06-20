@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Table, Button } from 'react-bootstrap'
 import Tablebody from '../../components/Table_body/Tablebody'
-import DropImage from '../../components/DragImage/DraagImage'
+import DropImage from '../../components/DragImage/DragImage'
 function UploadPage(props) {
 
     return (
