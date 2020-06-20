@@ -1,8 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
 import { Container, Table, Button } from 'react-bootstrap'
 import Tablebody from '../../components/Table_body/Tablebody'
 import DropImage from '../../components/DragImage/DragImage'
+
+import { Storage } from 'aws-amplify';
+
 function UploadPage(props) {
+
+    useEffect(() => {
+        Storage.get('Screenshot from 2020-06-20 20-43-19.png')
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    });
 
     return (
         <Container style={{ marginTop: "15%" }} >
@@ -15,7 +29,7 @@ function UploadPage(props) {
                     </tr>
                 </tbody>
             </Table>
-        <DropImage/>
+            <DropImage />
         </Container>
     );
 }
