@@ -1,0 +1,15 @@
+{
+	"auth": {
+		"miniprojectb97ee631": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"minitest": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}
